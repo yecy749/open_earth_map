@@ -38,10 +38,8 @@ if __name__ == "__main__":
         dir = xbd_fullimgs[idx, 1][0]
         fnm = xbd_fullimgs[idx, 0][0]
 
-        if len(f2.split("_")) != 2:
-            city = f2.split("_")[0]
-        else:
-            city = "_".join(f2.split("_")[:-1])
+
+        city = "_".join(f2.split("_")[:-1])
 
         img_path = os.path.join(ROOT, dir, "images", fnm)
         oem_path = os.path.join(OEMDIR, city, "labels", f2)
